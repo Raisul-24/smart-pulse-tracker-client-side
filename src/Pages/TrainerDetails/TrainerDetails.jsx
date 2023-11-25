@@ -13,6 +13,16 @@ const TrainerDetails = () => {
                <div className="">
                   <h1 className="text-3xl md:text-5xl font-bold">Name: {trainer.trainerName}</h1>
                   <p className="py-6 text-xl md:text-3xl font-semibold">Experience: {trainer.yearsOfExperience}</p>
+                  <p className="text-lg font-semibold">Email: {trainer.email}</p>
+                  <div className="my-3">
+                     <h2 className="text-xl font-bold">Skills:</h2>
+                     <div className="flex gap-2">
+                     {
+                        trainer.skills.map((skill, index) =>
+                           <p key={index} className=" font-medium">{skill}</p>)
+                     }
+                     </div>
+                  </div>
                   <div className="pb-6">
                      <h2 className="text-xl font-bold">Available TimeSlot:</h2>
                      {

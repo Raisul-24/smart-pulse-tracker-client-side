@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import BeTrainer from "../Pages/BeTrainner/BeTrainer";
+import PrivateRoute from "./PrivateRoute";
 
 
  const router = createBrowserRouter([
@@ -53,7 +54,7 @@ import BeTrainer from "../Pages/BeTrainner/BeTrainer";
       },
       {
         path: 'beTrainer',
-        element: <BeTrainer></BeTrainer>
+        element: <PrivateRoute><BeTrainer></BeTrainer></PrivateRoute>
       }
      ]
    },

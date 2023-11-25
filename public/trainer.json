@@ -1,69 +1,80 @@
 [
-   {
-     "trainerName": "John Doe",
-     "profileImage": "https://i.ibb.co/PYJRhLW/personal-trainer-arms-crossed-gym-260nw-493318507.jpg",
-     "yearsOfExperience": 5,
-     "availableTimeSlots": [
-       "Monday 10:00 AM - 11:00 AM",
-       "Wednesday 10:00 AM - 11:00 AM",
-       "Friday 2:00 PM - 3:00 PM",
-       "Saturday 3:00 PM - 4:00 PM"
-     ]
-   },
-   {
-     "trainerName": "Alice Johnson",
-     "profileImage": "https://i.ibb.co/tq4T1Qt/Sean-Syd1-min-768x862.png",
-     "yearsOfExperience": 8,
-     "availableTimeSlots": [
-       "Tuesday 3:00 PM - 4:00 PM",
-       "Thursday 3:00 PM - 4:00 PM",
-       "Saturday 10:00 AM - 11:00 AM",
-       "Sunday 1:00 PM - 2:00 PM"
-     ]
-   },
-   {
-     "trainerName": "Bob Smith",
-     "profileImage": "https://i.ibb.co/yWBsPzd/Chris-Hemsworth-and-trainer-Luke-Zocchi-071822-03-2000-bdb7e8ee2d7e4058a1ded98c7b281da1.jpg",
-     "yearsOfExperience": 6,
-     "availableTimeSlots": [
-       "Monday 8:00 AM - 9:00 AM",
-       "Wednesday 1:00 PM - 2:00 PM",
-       "Friday 4:00 PM - 5:00 PM",
-       "Sunday 11:00 AM - 12:00 PM"
-     ]
-   },
-   {
-     "trainerName": "Emma White",
-     "profileImage": "https://i.ibb.co/b5qjk4C/maxresdefault.jpg",
-     "yearsOfExperience": 7,
-     "availableTimeSlots": [
-       "Wednesday 1:00 PM - 2:00 PM",
-       "Saturday 1:00 PM - 2:00 PM",
-       "Sunday 3:00 PM - 4:00 PM",
-       "Sunday 5:00 PM - 6:00 PM"
-     ]
-   },
-   {
-     "trainerName": "Michael Brown",
-     "profileImage": "https://i.ibb.co/4d7rtxY/being-a-personal-trainer.jpg",
-     "yearsOfExperience": 9,
-     "availableTimeSlots": [
-       "Thursday 11:00 AM - 12:00 PM",
-       "Saturday 9:00 AM - 10:00 AM",
-       "Sunday 4:00 PM - 5:00 PM",
-       "Sunday 6:00 PM - 7:00 PM"
-     ]
-   },
-   {
-     "trainerName": "Sophia Davis",
-     "profileImage": "https://i.ibb.co/WWMkJry/PT-image-via-Ori-Gym.jpg",
-     "yearsOfExperience": 4,
-     "availableTimeSlots": [
-       "Tuesday 9:00 AM - 10:00 AM",
-       "Friday 9:00 AM - 10:00 AM",
-       "Saturday 4:00 PM - 5:00 PM",
-       "Sunday 2:00 PM - 3:00 PM"
-     ]
-   }
- ]
- 
+  {
+    "trainerName": "John Doe",
+    "profileImage": "https://i.ibb.co/PYJRhLW/personal-trainer-arms-crossed-gym-260nw-493318507.jpg",
+    "yearsOfExperience": 5,
+    "availableTimeSlots": [
+      "Monday 10:00 AM - 11:00 AM",
+      "Wednesday 10:00 AM - 11:00 AM",
+      "Friday 2:00 PM - 3:00 PM",
+      "Saturday 3:00 PM - 4:00 PM"
+    ],
+    "skills": ["Cardio", "Strength Training", "Yoga"],
+    "email": "john.doe@example.com"
+  },
+  {
+    "trainerName": "Alice Johnson",
+    "profileImage": "https://i.ibb.co/tq4T1Qt/Sean-Syd1-min-768x862.png",
+    "yearsOfExperience": 8,
+    "availableTimeSlots": [
+      "Tuesday 3:00 PM - 4:00 PM",
+      "Thursday 3:00 PM - 4:00 PM",
+      "Saturday 10:00 AM - 11:00 AM",
+      "Sunday 1:00 PM - 2:00 PM"
+    ],
+    "skills": ["Pilates", "Functional Training", "HIIT"],
+    "email": "alice.johnson@example.com"
+  },
+  {
+    "trainerName": "Bob Smith",
+    "profileImage": "https://i.ibb.co/yWBsPzd/Chris-Hemsworth-and-trainer-Luke-Zocchi-071822-03-2000-bdb7e8ee2d7e4058a1ded98c7b281da1.jpg",
+    "yearsOfExperience": 6,
+    "availableTimeSlots": [
+      "Monday 8:00 AM - 9:00 AM",
+      "Wednesday 1:00 PM - 2:00 PM",
+      "Friday 4:00 PM - 5:00 PM",
+      "Sunday 11:00 AM - 12:00 PM"
+    ],
+    "skills": ["Cardio", "Strength Training", "Functional Training"],
+    "email": "bob.smith@example.com"
+  },
+  {
+    "trainerName": "Emma White",
+    "profileImage": "https://i.ibb.co/b5qjk4C/maxresdefault.jpg",
+    "yearsOfExperience": 7,
+    "availableTimeSlots": [
+      "Wednesday 1:00 PM - 2:00 PM",
+      "Saturday 1:00 PM - 2:00 PM",
+      "Sunday 3:00 PM - 4:00 PM",
+      "Sunday 5:00 PM - 6:00 PM"
+    ],
+    "skills": ["Yoga", "Pilates", "HIIT"],
+    "email": "emma.white@example.com"
+  },
+  {
+    "trainerName": "Michael Brown",
+    "profileImage": "https://i.ibb.co/4d7rtxY/being-a-personal-trainer.jpg",
+    "yearsOfExperience": 9,
+    "availableTimeSlots": [
+      "Thursday 11:00 AM - 12:00 PM",
+      "Saturday 9:00 AM - 10:00 AM",
+      "Sunday 4:00 PM - 5:00 PM",
+      "Sunday 6:00 PM - 7:00 PM"
+    ],
+    "skills": ["Strength Training", "Functional Training", "HIIT"],
+    "email": "michael.brown@example.com"
+  },
+  {
+    "trainerName": "Sophia Davis",
+    "profileImage": "https://i.ibb.co/WWMkJry/PT-image-via-Ori-Gym.jpg",
+    "yearsOfExperience": 4,
+    "availableTimeSlots": [
+      "Tuesday 9:00 AM - 10:00 AM",
+      "Friday 9:00 AM - 10:00 AM",
+      "Saturday 4:00 PM - 5:00 PM",
+      "Sunday 2:00 PM - 3:00 PM"
+    ],
+    "skills": ["Cardio", "Yoga", "Pilates"],
+    "email": "sophia.davis@example.com"
+  }
+]
