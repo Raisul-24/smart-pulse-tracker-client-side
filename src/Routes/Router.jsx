@@ -59,8 +59,7 @@ import BookTrainer from "../Pages/BookTrainer/BookTrainer";
       },
       {
         path: 'bookTrainer',
-        element: <BookTrainer></BookTrainer>,
-        // loader: ({params}) => fetch(`http://localhost:5013/trainers/${params.id}`)
+        element: <PrivateRoute><BookTrainer></BookTrainer></PrivateRoute>,
       }
      ]
    },
