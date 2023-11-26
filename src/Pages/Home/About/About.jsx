@@ -5,7 +5,7 @@ const About = () => {
    return (
       <div className="my-10">
         
-      <h2 className="text-4xl text-center font-bold my-6">About Us</h2>
+      <h2 className="text-4xl text-center font-bold my-6 text-black">About Us</h2>
       <div className=" text-center">
       <p>
         Welcome to SmartPulse Fitness Tracker, where fitness meets excellence. We are dedicated to providing a

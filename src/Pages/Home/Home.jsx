@@ -4,17 +4,19 @@ import Features from "./Feature/Features";
 import About from "./About/About";
 import Team from "./Team/Team";
 import Newsletter from "./Newsletter/Newsletter";
+import Testimonial from "./Testimonial/Testimonial";
 
 
 const Home = () => {
    return (
-      <div>
+      <div className="pt-20">
          <Helmet>
             <title>SmartPulse Tracker | Home</title>
          </Helmet>
          <Banner></Banner>
          <Features></Features>
          <About></About>
+         <Testimonial></Testimonial>
          <Newsletter></Newsletter>
          <Team></Team>
 

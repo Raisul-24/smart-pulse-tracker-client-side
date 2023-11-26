@@ -18,7 +18,7 @@ const Features = () => {
 
    return (
       <div>
-         <h2 className="text-4xl text-center font-bold my-6">Some Key Features</h2>
+         <h2 className="text-4xl text-center font-bold my-6 text-black">Some Key Features</h2>
          {loading ? (
             <div className="flex justify-center items-center h-40">
                <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500"></div>

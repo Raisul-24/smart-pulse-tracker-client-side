@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import UseAxiosPublic from "../../../hooks/UseAxiosPublic";
-import Marquee from "react-fast-marquee";
 
 
 const Team = () => {
@@ -16,15 +15,15 @@ const Team = () => {
    }, [axiosPublic]);
    // console.log(trainers)
    return (
-      <div className="my-10">
-         <h2 className="text-4xl text-center font-extrabold mb-4">Our Team</h2>
+      <div className="mb-10">
+         <h2 className="text-4xl text-center font-extrabold mb-8 text-black">Best Trainer of the Year</h2>
          {loading ? 
                <div className="flex justify-center items-center h-40">
                   <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500"></div>
                </div>
                :
                
-                  <Marquee >
+                  <div className="grid grid-cols-3 gap-7" >
                      {
                         trainers.map(trainer => <div key={trainer._id}>
                            <img src={trainer.profileImage} alt="profile-picture" className="w-96 h-60 mr-10 rounded-t-xl" />
@@ -32,7 +31,7 @@ const Team = () => {
                         </div>
                          )  
                      }
-                  </Marquee>
+                  </div>
                }
       </div>
    );
