@@ -11,6 +11,7 @@ import Register from "../Pages/Register/Register";
 import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import BeTrainer from "../Pages/BeTrainner/BeTrainer";
 import PrivateRoute from "./PrivateRoute";
+import BookTrainer from "../Pages/BookTrainer/BookTrainer";
 
 
  const router = createBrowserRouter([
@@ -55,6 +56,11 @@ import PrivateRoute from "./PrivateRoute";
       {
         path: 'beTrainer',
         element: <PrivateRoute><BeTrainer></BeTrainer></PrivateRoute>
+      },
+      {
+        path: 'bookTrainer',
+        element: <BookTrainer></BookTrainer>,
+        // loader: ({params}) => fetch(`http://localhost:5013/trainers/${params.id}`)
       }
      ]
    },
