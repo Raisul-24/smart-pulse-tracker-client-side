@@ -26,7 +26,7 @@ const Features = () => {
             :
             (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                {
-                  features.map(feature => <div key={feature._id} className="card w-80 bg-white shadow-xl">
+                  features.map(feature => <div key={feature._id} className="card w-72 bg-white shadow-xl">
                      <figure>
                         <img src={feature.img} className="rounded-t-xl h-44 w-full" />
                      </figure>
