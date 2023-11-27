@@ -26,6 +26,22 @@ const Community = () => {
          // console.log(currentPage)
       }
    };
+   const handleVote = (postId, type) => {
+      axiosPublic.patch(`/forum/${postId}/vote`, { type })
+         .then(res => {
+            const updatedForum = forum.posts.map(post => {
+               if (post._id === postId) {
+                  return {
+                     ...post,
+                     upvotes: res.data.upvotes,
+                     downvotes: res.data.downvotes,
+                  };
+               }
+               return post;
+            });
+            setForum({ posts: updatedForum });
+         })
+   };
 
    return (
       <div className="pt-24">
@@ -42,7 +58,8 @@ const Community = () => {
                      <h2 className="text-medium text-red-400 font-medium"> Question: {post.question}</h2>
                      <p className="text-black">Answer: {post.answer}</p>
                      <div className="flex items-center gap-x-5 mt-4 mb-2 text-black">
-                        <h2 className="font-bold  text-sm">Vote Now!!!</h2>
+                        <img src="https://i.ibb.co/pfRtjBv/vote.gif" className="h-10" alt="" />
+                        {/* <h2 className="font-bold  text-sm">Vote Now!!!</h2> */}
                         <div className="flex items-center gap-x-1">
                            <AiFillLike></AiFillLike><h2>{post.upvotes}</h2>
                         </div>
@@ -51,29 +68,29 @@ const Community = () => {
                         </div>
                      </div>
                      <div className="flex justify-start gap-5 ">
-                        <button  
-                        // onClick={() => handleVote(post._id, 'upvotes')}
-                         className="btn btn-outline btn-sm btn-success">Up-Vote </button>
-                        <button  
-                        // onClick={() => handleVote(post._id, 'downvotes')}
-                         className="btn btn-outline btn-sm btn-error">Down-Vote </button>
+                        <button
+                           onClick={() => handleVote(post._id, 'upvote')}
+                           className="btn btn-outline btn-sm btn-success">Up-Vote </button>
+                        <button
+                           onClick={() => handleVote(post._id, 'downvote')}
+                           className="btn btn-outline btn-sm btn-error">Down-Vote </button>
                      </div>
-                     
+
                   </div>)}
                   <div className="flex justify-center gap-x-3 my-8">
-                  <button
-                     className="btn btn-sm btn-outline"
-                     onClick={() => handlePageChange(currentPage - 1)}
-                  >
-                     &lt; Prev
-                  </button>
-                  <button
-                     className="btn btn-sm btn-outline"
-                     onClick={() => handlePageChange(currentPage + 1)}
-                  >
-                     Next &gt;
-                  </button>
-               </div>
+                     <button
+                        className="btn btn-sm btn-outline"
+                        onClick={() => handlePageChange(currentPage - 1)}
+                     >
+                        &lt; Prev
+                     </button>
+                     <button
+                        className="btn btn-sm btn-outline"
+                        onClick={() => handlePageChange(currentPage + 1)}
+                     >
+                        Next &gt;
+                     </button>
+                  </div>
                </div>
          }
       </div>
