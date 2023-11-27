@@ -25,14 +25,13 @@ const Newsletter = () => {
    
    return (
       <div>
-         <div className="hero h-[500px] bg-white rounded-xl">
-            <div className="hero-content flex-col lg:flex-row-reverse gap-52">
+         <div className="hero h-[500px] bg-white rounded-xl mb-36 md:mb-2">
+            <div className="hero-content flex-col lg:flex-row-reverse md:gap-52">
                <div className="text-center lg:text-left">
                   <TypeAnimation className=" font-bold text-orange-500"
                      sequence={[
-                        // Same substring at the start will only be typed out once, initially
                         '-Subscribe Now!!!',
-                        1000, // wait 1s before replacing "Mice" with "Hamsters"
+                        1000,
                         '- Subscribe to SmartPulse Tracker!!',
                         1000,
                         '- Shape your destiny with SmartPulse Tracker!!',
@@ -45,7 +44,7 @@ const Newsletter = () => {
                      style={{ fontSize: '3rem', display: 'inline-block' }}
                      repeat={Infinity}
                   />
-                  <p className="py-6">Join the SmartPulse Tracker community, where fitness meets inspiration, and where your journey to a better you becomes an incredible adventure. <br />
+                  <p className="py-6 hidden md:flex">Join the SmartPulse Tracker community, where fitness meets inspiration, and where your journey to a better you becomes an incredible adventure. <br />
                      Remember, your pulse is the rhythm of your life—let SmartPulse Tracker help you make it extraordinary. Subscribe today and start thriving.</p>
                </div>
                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-lime-100">

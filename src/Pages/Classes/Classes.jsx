@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Classes = () => {
    return (
-      <div className="pt-24">
+      <div className="pt-24 text-black">
          <div className="">
             <h2 className="text-4xl text-center font-bold ">Weekly Class Schedule</h2>
             <div className="overflow-x-auto my-6 mb-14">
@@ -34,7 +34,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -55,7 +55,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -76,7 +76,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -97,7 +97,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -124,7 +124,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -145,7 +145,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -166,7 +166,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -187,7 +187,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -214,7 +214,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -235,7 +235,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -256,7 +256,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -277,7 +277,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -304,7 +304,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -325,7 +325,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -346,7 +346,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>
@@ -367,7 +367,7 @@ const Classes = () => {
                                  </Link>
                               </div>
                               <dialog id="my_modal_3" className="modal">
-                                 <div className="modal-box">
+                                 <div className="modal-box bg-white text-black">
                                     <form method="dialog">
                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     </form>

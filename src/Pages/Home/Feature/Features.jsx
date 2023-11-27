@@ -24,7 +24,7 @@ const Features = () => {
                <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500"></div>
             </div>)
             :
-            (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-3 md:p-0">
                {
                   features.map(feature => <div key={feature._id} className="card w-72 bg-white shadow-xl">
                      <figure>
