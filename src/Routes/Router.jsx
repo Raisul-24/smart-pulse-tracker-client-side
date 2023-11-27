@@ -12,6 +12,8 @@ import TrainerDetails from "../Pages/TrainerDetails/TrainerDetails";
 import BeTrainer from "../Pages/BeTrainner/BeTrainer";
 import PrivateRoute from "./PrivateRoute";
 import BookTrainer from "../Pages/BookTrainer/BookTrainer";
+import DashBoardLayout from "../Layout/DashBoardLayout";
+import AllUsers from "../Pages/Dashboard/AllUser/AllUsers";
 
 
  const router = createBrowserRouter([
@@ -60,6 +62,18 @@ import BookTrainer from "../Pages/BookTrainer/BookTrainer";
       {
         path: 'bookTrainer',
         element: <PrivateRoute><BookTrainer></BookTrainer></PrivateRoute>,
+      },
+      // dashboard
+      {
+        path: 'dashboard',
+        element: <PrivateRoute><DashBoardLayout></DashBoardLayout></PrivateRoute>,
+        children: [
+          // admin
+          {
+            path: 'allUsers',
+            element: <AllUsers></AllUsers>
+          }
+        ]
       }
      ]
    },

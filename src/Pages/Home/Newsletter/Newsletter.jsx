@@ -7,9 +7,13 @@ import Swal from "sweetalert2";
 const Newsletter = () => {
    const { register, handleSubmit, reset } = useForm();
    const axiosPublic = UseAxiosPublic();
-   const onSubmit = async () =>{
+   const onSubmit = async (data) =>{
       // console.log(data)
-      const subscriber = await axiosPublic.post('/subscribers')
+      const subscriberInfo = {  
+         name: data.name,
+         email: data.email,
+      }
+      const subscriber = await axiosPublic.post('/subscribers', subscriberInfo)
       if(subscriber.data.insertedId){
          
          Swal.fire({

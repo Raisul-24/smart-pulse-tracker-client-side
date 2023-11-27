@@ -5,6 +5,7 @@ import About from "./About/About";
 import Team from "./Team/Team";
 import Newsletter from "./Newsletter/Newsletter";
 import Testimonial from "./Testimonial/Testimonial";
+import Forum from "./Forum/Forum";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
          <Features></Features>
          <About></About>
          <Testimonial></Testimonial>
+         <Forum></Forum>
          <Newsletter></Newsletter>
          <Team></Team>
 

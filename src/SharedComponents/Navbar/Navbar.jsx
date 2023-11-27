@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 import { toast } from "react-hot-toast";
+// import UseAdmin from "../../hooks/UseAdmin";
 
 const Navbar = () => {
    const { user, logOut } = UseAuth();
@@ -25,10 +26,10 @@ const Navbar = () => {
          user && isAdmin ? <li><Link to='/dashboard/adminDashBoard'>Dash Board</Link></li>
          :
          <li><Link to='/dashBoard/userDashBoard'>Dash Board</Link></li>
-      } */}
-      {/* {
+      } 
+      {
          user && !isAdmin && <li><Link to='/dashBoard/userDashBoard'>Dash Board</Link></li>
-      } */}
+      }  */}
       <li><Link to='/trainer'>Trainer</Link></li>
       <li><Link to='/classes'>Classes</Link></li>
       <li><Link to='/dashboard'>DashBoard</Link></li>
@@ -45,7 +46,7 @@ const Navbar = () => {
                      }
                      </div>
                </label>
-               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-60 text-xs">
+               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-60 text-xs">
                   <li><a>{user?.displayName}</a></li>
                   <li><a>{user.email}</a></li>
                </ul>
