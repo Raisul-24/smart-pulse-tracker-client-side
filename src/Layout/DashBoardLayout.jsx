@@ -1,16 +1,23 @@
 
 import { FaHome, FaUsers } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
+import UseAdmin from '../hooks/UseAdmin';
 
 const DashBoardLayout = () => {
-
+// TODO get isAdmin value from the database
+const [isAdmin, isAdminLoading] = UseAdmin();
+if (isAdminLoading) {
+   <div className="">
+      <span className="loading loading-spinner text-primary"></span>
+   </div>
+}
    return (
       <div className="flex py-20">
          {/* dashboard side bar  */}
          <div className="w-64 min-h-screen bg-lime-100">
             <ul className="menu p-4 text-black text-lg font-semibold">
                {
-                  // isAdmin ?
+                  isAdmin ?
                    <>
                      <li>
                         <NavLink to="/dashboard/adminDashBoard">
@@ -39,16 +46,16 @@ const DashBoardLayout = () => {
                            Applied Trainers</NavLink>
                      </li>
                   </>
-                     // :
-                     // <>
-                     //    <li>
-                     //       <NavLink to="/dashboard/userDashBoard">
-                     //          <FaHome></FaHome>
-                     //          User Home</NavLink>
-                     //    </li>
+                     :
+                     <>
+                        <li>
+                           <NavLink to="/dashboard/userDashBoard">
+                              <FaHome></FaHome>
+                              User Home</NavLink>
+                        </li>
                         
 
-                     // </>
+                     </>
                }
                <div className="divider"></div>
                {/* common */}

@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 
 const CheckOutForm = ({amount}) => {
    const payAmount = amount;
-   console.log(payAmount)
    const [error, setError] = useState('');
    const [transactionId, setTransactionId] =useState('');
    const navigate = useNavigate();
@@ -84,7 +83,7 @@ const CheckOutForm = ({amount}) => {
       else {
          console.log('payment intent', paymentIntent)
          if(paymentIntent.status === 'succeeded'){
-            console.log('transaction id', paymentIntent.id);
+            // console.log('transaction id', paymentIntent.id);
             setTransactionId(paymentIntent.id);
 
 
@@ -93,11 +92,11 @@ const CheckOutForm = ({amount}) => {
                email: user.email,
                price: totalPrice,
                transactionId: paymentIntent.id,
-               date: new Date(), // utc date convert. use moment js to  
+               date: new Date(),
                status: 'pending'
            }
             const res = await axiosSecure.post('/payments', payment);
-            console.log(res.data);
+            // console.log(res.data);
             
             if (res.data?.paymentResult?.insertedId) {
                 Swal.fire({
@@ -107,7 +106,7 @@ const CheckOutForm = ({amount}) => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/dashboard')
+                navigate('/dashboard');
             }
          }
       }

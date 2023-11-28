@@ -17,6 +17,7 @@ import AllUsers from "../Pages/Dashboard/AllUser/AllUsers";
 import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AllSubscribers from "../Pages/Dashboard/AllSubscibers/AllSubscribers";
 import Payment from "../Pages/Payment/Payment";
+import AdminRoute from "./AdminRoute";
 
 
  const router = createBrowserRouter([
@@ -74,7 +75,7 @@ import Payment from "../Pages/Payment/Payment";
           // admin
           {
             path: 'allUsers',
-            element: <AllUsers></AllUsers>
+            element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
           },
           {
             path: 'allTrainers',

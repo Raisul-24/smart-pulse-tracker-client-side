@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import UseAxiosPublic from "../../hooks/UseAxiosPublic";
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
+// import UseAuth from "../../hooks/UseAuth";
+// import { useNavigate } from "react-router-dom";
 
 
 const Community = () => {
    const axiosPublic = UseAxiosPublic();
+   // const {user} = UseAuth();
+   // const navigate = useNavigate();
    const [forum, setForum] = useState([]);
    const [loading, setLoading] = useState(true);
    const [currentPage, setCurrentPage] = useState(1);
@@ -26,6 +30,7 @@ const Community = () => {
          // console.log(currentPage)
       }
    };
+   
    const handleVote = (postId, type) => {
       axiosPublic.patch(`/forum/${postId}/vote`, { type })
          .then(res => {

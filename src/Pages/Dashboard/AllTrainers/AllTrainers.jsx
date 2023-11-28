@@ -17,6 +17,13 @@ const AllTrainers = () => {
          return res.data;
       }
    })
+
+   const handlePayment = async (userId) => {
+      await axiosSecure.patch(`/trainers/${userId}`, {
+         status: 'paid',
+      });
+      
+   };
    // console.log(trainers)
    if(loading){
       <progress className="progress progress-secondary w-56"></progress>
@@ -37,6 +44,7 @@ const AllTrainers = () => {
                         <th> Name</th>
                         <th> Email</th>
                         <th> Salary</th>
+                        <th> Status</th>
                         <th> Make Payment</th>
                      </tr>
                   </thead>
@@ -52,9 +60,11 @@ const AllTrainers = () => {
                            </td>
                            <td>{user.email}</td>
                            <td>{user.salary}</td>
+                           <td>{user.role}</td>
                            <td>
                               <Link to={`/payment?amount=${user.salary}`}
-                              ><button className="btn btn-outline btn-xs btn-info">Pay</button></Link>
+                              ><button onClick={() => handlePayment(user._id)}
+                              className="btn btn-outline btn-xs btn-info">Pay</button></Link>
                               </td>
                         </tr>)
                      }
