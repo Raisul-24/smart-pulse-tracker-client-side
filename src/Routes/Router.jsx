@@ -22,6 +22,8 @@ import AllAppliedTrainers from "../Pages/Dashboard/AllAppliedTrainers/AllApplied
 import UserDashboard from "../Pages/Dashboard/UserDashBoard/UserDashboard";
 import AdminDashboard from "../Pages/Dashboard/AdminDashBoard/AdminDashboard";
 import RecommendedClasses from "../Pages/Dashboard/RecommendedClasses/RecommendedClasses";
+import ProfileSettings from "../Pages/Dashboard/ProfileSettings/ProfileSettings";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 
 
  const router = createBrowserRouter([
@@ -86,7 +88,8 @@ import RecommendedClasses from "../Pages/Dashboard/RecommendedClasses/Recommende
             element: <PrivateRoute><RecommendedClasses></RecommendedClasses></PrivateRoute>
           },
           {
-            
+            path: 'profileSettings',
+            element: <PrivateRoute><ProfileSettings></ProfileSettings></PrivateRoute> 
           },
           // admin
           {
@@ -108,6 +111,10 @@ import RecommendedClasses from "../Pages/Dashboard/RecommendedClasses/Recommende
           {
             path: 'appliedTrainers',
             element: <AdminRoute><AllAppliedTrainers></AllAppliedTrainers></AdminRoute>
+          },
+          {
+            path: 'paymentHistory',
+            element: <PaymentHistory></PaymentHistory>
           }
         ]
       }

@@ -4,7 +4,7 @@ import UseAuth from "../../../hooks/UseAuth";
 
 const UserDashboard = () => {
    const { user } = UseAuth();
-   console.log(user);
+   // console.log(user);
    return (
       <div className="pt-24">
          <h2 className="text-3xl font-bold text-center">

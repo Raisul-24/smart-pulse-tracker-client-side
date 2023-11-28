@@ -1,5 +1,5 @@
 
-import { FaHome, FaUsers } from 'react-icons/fa';
+import { FaBook, FaHome, FaUsers } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import UseAdmin from '../hooks/UseAdmin';
 import { FaComputer, FaPeopleLine } from 'react-icons/fa6';
@@ -45,6 +45,11 @@ if (isAdminLoading) {
                         <NavLink to="/dashboard/appliedTrainers">
                            <FaUsers></FaUsers>
                            Applied Trainers</NavLink>
+                     </li>
+                     <li>
+                        <NavLink to="/dashboard/paymentHistory">
+                           <FaBook></FaBook>
+                           Payment History</NavLink>
                      </li>
                   </>
                      :
