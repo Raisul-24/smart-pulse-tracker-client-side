@@ -57,9 +57,12 @@ const Community = () => {
                </div>
                :
                <div> <h2 className="text-4xl text-center text-black  font-extrabold">Our Community</h2>
-                  {forum.posts.map((post) => <div key={post._id} className="my-10 container mx-auto border-b-2 pb-6">
+                  {forum.posts.map((post) => <div key={post._id} className="my-10 container mx-auto border-b-2 pb-6 flex">
 
-                     <h2 className="text-lg text-black font-semibold "><span className="font-bold">Title:</span> {post.title}</h2>
+                     <div>
+                     <h2 className="text-lg text-black font-semibold ">
+                        <span className="font-bold">Title:</span> {post.title} 
+                        </h2>
                      <h2 className="text-medium text-red-400 font-medium"> Question: {post.question}</h2>
                      <p className="text-black">Answer: {post.answer}</p>
                      <div className="flex items-center gap-x-5 mt-4 mb-2 text-black">
@@ -79,6 +82,11 @@ const Community = () => {
                         <button
                            onClick={() => handleVote(post._id, 'downvote')}
                            className="btn btn-outline btn-sm btn-error">Down-Vote </button>
+                     </div>
+                     </div>
+                     <div className="justify-end">
+                     {post?.role ==='admin' && <span className="btn btn-sm btn-outline btn-warning">Admin</span>}
+                        {post?.role ==='moderator' && <span className="btn btn-sm btn-outline btn-warning">Moderator</span>}
                      </div>
 
                   </div>)}
