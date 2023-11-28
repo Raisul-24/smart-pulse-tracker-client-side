@@ -18,6 +18,7 @@ import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
 import AllSubscribers from "../Pages/Dashboard/AllSubscibers/AllSubscribers";
 import Payment from "../Pages/Payment/Payment";
 import AdminRoute from "./AdminRoute";
+import AllAppliedTrainers from "../Pages/Dashboard/AllAppliedTrainers/AllAppliedTrainers";
 
 
  const router = createBrowserRouter([
@@ -79,12 +80,16 @@ import AdminRoute from "./AdminRoute";
           },
           {
             path: 'allTrainers',
-            element: <AllTrainers></AllTrainers>
+            element: <AdminRoute><AllTrainers></AllTrainers></AdminRoute>
           },
           {
             path: 'allSubscribers',
-            element: <AllSubscribers></AllSubscribers>
+            element: <AdminRoute><AllSubscribers></AllSubscribers></AdminRoute>
           },
+          {
+            path: 'appliedTrainers',
+            element: <AdminRoute><AllAppliedTrainers></AllAppliedTrainers></AdminRoute>
+          }
         ]
       }
      ],

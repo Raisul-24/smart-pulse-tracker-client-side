@@ -42,6 +42,7 @@ const AllTrainers = () => {
                         <th>
                         </th>
                         <th> Name</th>
+                        <th>Image</th>
                         <th> Email</th>
                         <th> Salary</th>
                         <th> Status</th>
@@ -56,8 +57,13 @@ const AllTrainers = () => {
                            </th>
 
                            <td>
-                              {user.name}
+                              {user.trainerName}
                            </td>
+                           <td><div className="avatar">
+                              <div className="mask mask-squircle w-12 h-12">
+                                 <img src={user.profileImage} alt="Avatar Tailwind CSS Component" />
+                              </div>
+                           </div></td>
                            <td>{user.email}</td>
                            <td>{user.salary}</td>
                            <td>{user.role}</td>
