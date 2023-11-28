@@ -2,13 +2,14 @@ import { useState } from "react";
 import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { FaEye } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 const AllAppliedTrainers = () => {
    const axiosSecure = UseAxiosSecure();
    const [loading, setLoading] = useState(true);
 
-   const { data: applyTrainers = [], } = useQuery({
+   const { data: applyTrainers = [], refetch  } = useQuery({
       queryKey: ['applyTrainers'],
       queryFn: async () => {
          const res = await axiosSecure.get('/applyTrainers');
@@ -16,7 +17,44 @@ const AllAppliedTrainers = () => {
          return res.data;
       }
    })
-   console.log(applyTrainers)
+   // console.log(applyTrainers)
+   const handleConfirm = async (user) => {
+      axiosSecure.patch(`/applyTrainers/${user._id}`,{ status: 'confirmed' })
+      .then(res => {
+         // console.log(res.data)
+         if (res.data.modifiedCount > 0) {
+            refetch();
+            // axiosSecure.post('/trainers')
+            Swal.fire({
+               position: "top-end",
+               icon: "success",
+               title: `${user.name} is a Trainer Now!!!`,
+               showConfirmButton: false,
+               timer: 1500
+            });
+         }
+      })
+   };
+
+   const handleReject = async (user) => {
+console.log('res')
+      axiosSecure.patch(`/applyTrainers/${user._id}`, { status: 'rejected' })
+      .then(res => {
+         // console.log(res.data)
+         if (res.data.modifiedCount > 0) {
+            refetch();
+            Swal.fire({
+               position: "top-end",
+               icon: "success",
+               title: `Your application has been rejected.`,
+               showConfirmButton: false,
+               timer: 1500
+            });
+         }
+      })
+   };
+
+
    if (loading) {
       <progress className="progress progress-secondary w-56"></progress>
    }
@@ -71,9 +109,22 @@ const AllAppliedTrainers = () => {
                                  <p>Skills: {user.skills.map(skill => <span key={skill}>{skill}</span>)}</p>
                               </div>
                            </dialog></td>
-                        <td><button className="btn btn-sm btn-outline btn-success">Confirm 
-                        </button></td>
-                        <td><button className="btn btn-sm btn-outline btn-error">Reject</button></td>
+                        <td>
+                           {
+                              user.role ? <p className="font-bold text-sm">{user.role}</p> : 
+                              <button onClick={() => {handleConfirm(user)}}
+                              className="btn btn-sm btn-outline btn-success">Confirm 
+                             </button>
+                           }
+                        </td>
+                        <td>
+                        {
+                              user.role ? <p className="font-bold text-sm">{user.role}</p> : 
+                              <button onClick={() => {handleReject(user)}}
+                              className="btn btn-sm btn-outline btn-error">Reject</button>
+                           }
+                           
+                        </td>
                      </tr>)
                   }
 

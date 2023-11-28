@@ -2,6 +2,7 @@
 import { FaHome, FaUsers } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import UseAdmin from '../hooks/UseAdmin';
+import { FaComputer, FaPeopleLine } from 'react-icons/fa6';
 
 const DashBoardLayout = () => {
 // TODO get isAdmin value from the database
@@ -20,7 +21,7 @@ if (isAdminLoading) {
                   isAdmin ?
                    <>
                      <li>
-                        <NavLink to="/dashboard/adminDashBoard">
+                        <NavLink to="/dashboard/adminDashboard">
                            <FaHome></FaHome>
                            Admin Home</NavLink>
                      </li>
@@ -49,9 +50,19 @@ if (isAdminLoading) {
                      :
                      <>
                         <li>
-                           <NavLink to="/dashboard/userDashBoard">
+                           <NavLink to="/dashboard/userDashboard">
                               <FaHome></FaHome>
                               User Home</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/profileSettings">
+                              <FaPeopleLine></FaPeopleLine>
+                              Profile Settings</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/recommendedClasses">
+                              <FaComputer></FaComputer>
+                              Classes</NavLink>
                         </li>
                         
 

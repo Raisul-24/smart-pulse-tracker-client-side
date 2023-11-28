@@ -19,6 +19,9 @@ import AllSubscribers from "../Pages/Dashboard/AllSubscibers/AllSubscribers";
 import Payment from "../Pages/Payment/Payment";
 import AdminRoute from "./AdminRoute";
 import AllAppliedTrainers from "../Pages/Dashboard/AllAppliedTrainers/AllAppliedTrainers";
+import UserDashboard from "../Pages/Dashboard/UserDashBoard/UserDashboard";
+import AdminDashboard from "../Pages/Dashboard/AdminDashBoard/AdminDashboard";
+import RecommendedClasses from "../Pages/Dashboard/RecommendedClasses/RecommendedClasses";
 
 
  const router = createBrowserRouter([
@@ -73,7 +76,23 @@ import AllAppliedTrainers from "../Pages/Dashboard/AllAppliedTrainers/AllApplied
         path: 'dashboard',
         element: <PrivateRoute><DashBoardLayout></DashBoardLayout></PrivateRoute>,
         children: [
+          // user
+          {
+            path: 'userDashboard',
+            element: <PrivateRoute><UserDashboard></UserDashboard></PrivateRoute>
+          },
+          {
+            path: 'recommendedClasses',
+            element: <PrivateRoute><RecommendedClasses></RecommendedClasses></PrivateRoute>
+          },
+          {
+            
+          },
           // admin
+          {
+            path: 'adminDashboard',
+            element: <AdminRoute><AdminDashboard></AdminDashboard></AdminRoute>
+          },
           {
             path: 'allUsers',
             element: <AdminRoute><AllUsers></AllUsers></AdminRoute>

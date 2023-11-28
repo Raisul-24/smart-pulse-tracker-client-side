@@ -5,6 +5,7 @@ import { FaUpload } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import UseAxiosSecure from "../../hooks/UseAxiosSecure";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,6 +15,7 @@ const BeTrainer = () => {
    const axiosSecure = UseAxiosSecure();
    const [selectedSkills, setSelectedSkills] = useState([]);
    const availableSkills = ["Cardio", "Strength Training", "Yoga", "Pilates", "Functional Training", "HIIT"];
+   const navigate = useNavigate();
 
    const handleSkillToggle = (skill) => {
       if (selectedSkills.includes(skill)) {
@@ -44,7 +46,7 @@ const BeTrainer = () => {
       // console.log(newTrainer)
 
    const trainerNew = await axiosSecure.post('/applyTrainers', newTrainer);
-   console.log(trainerNew.data)
+   // console.log(trainerNew.data)
    if (trainerNew.data.insertedId) {
       reset();
       Swal.fire({
@@ -54,6 +56,7 @@ const BeTrainer = () => {
          showConfirmButton: false,
          timer: 1500
       });
+      navigate('/trainer')
    }
 }
 

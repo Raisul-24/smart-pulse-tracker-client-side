@@ -3,12 +3,10 @@
 import { Link } from "react-router-dom";
 import UseAuth from "../../hooks/UseAuth";
 import { toast } from "react-hot-toast";
-// import UseAdmin from "../../hooks/UseAdmin";
 
 const Navbar = () => {
    const { user, logOut } = UseAuth();
 
-   // const {isAdmin} = UseAdmin();
 
    const handleLogOut = async () => {
       try {
@@ -22,19 +20,10 @@ const Navbar = () => {
    const navLinks = <>
       <li><Link to='/'>Home</Link></li>
       <li><Link to='/gallery'>Gallery</Link></li>
-      {/* {
-         user && isAdmin ? <li><Link to='/dashboard/adminDashBoard'>Dash Board</Link></li>
-         :
-         <li><Link to='/dashBoard/userDashBoard'>Dash Board</Link></li>
-      } 
-      {
-         user && !isAdmin && <li><Link to='/dashBoard/userDashBoard'>Dash Board</Link></li>
-      }  */}
       <li><Link to='/trainer'>Trainer</Link></li>
       <li><Link to='/classes'>Classes</Link></li>
       <li><Link to='/dashboard'>DashBoard</Link></li>
       <li><Link to='/community'>Community</Link></li>
-      {/* photoURL */}
       {
          user &&
             <div className="dropdown dropdown-end hidden lg:flex">

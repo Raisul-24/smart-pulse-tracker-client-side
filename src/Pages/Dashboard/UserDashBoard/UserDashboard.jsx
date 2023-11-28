@@ -1,8 +1,10 @@
-
 import UseAuth from "../../../hooks/UseAuth";
 
-const Dashboard = () => {
+
+
+const UserDashboard = () => {
    const { user } = UseAuth();
+   console.log(user);
    return (
       <div className="pt-24">
          <h2 className="text-3xl font-bold text-center">
@@ -15,4 +17,4 @@ const Dashboard = () => {
    );
 };
 
-export default Dashboard;
+export default UserDashboard;
