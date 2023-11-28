@@ -14,6 +14,9 @@ import PrivateRoute from "./PrivateRoute";
 import BookTrainer from "../Pages/BookTrainer/BookTrainer";
 import DashBoardLayout from "../Layout/DashBoardLayout";
 import AllUsers from "../Pages/Dashboard/AllUser/AllUsers";
+import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
+import AllSubscribers from "../Pages/Dashboard/AllSubscibers/AllSubscribers";
+import Payment from "../Pages/Payment/Payment";
 
 
  const router = createBrowserRouter([
@@ -72,11 +75,23 @@ import AllUsers from "../Pages/Dashboard/AllUser/AllUsers";
           {
             path: 'allUsers',
             element: <AllUsers></AllUsers>
-          }
+          },
+          {
+            path: 'allTrainers',
+            element: <AllTrainers></AllTrainers>
+          },
+          {
+            path: 'allSubscribers',
+            element: <AllSubscribers></AllSubscribers>
+          },
         ]
       }
-     ]
+     ],
    },
+   {
+    path: '/payment',
+    element: <Payment></Payment>
+   }
  ]);
 
 

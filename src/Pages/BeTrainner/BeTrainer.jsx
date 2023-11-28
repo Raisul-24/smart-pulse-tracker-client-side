@@ -43,7 +43,7 @@ const BeTrainer = () => {
       }
       // console.log(newTrainer)
 
-   const trainerNew = await axiosSecure.post('/trainers', newTrainer);
+   const trainerNew = await axiosSecure.post('/applyTrainers', newTrainer);
    console.log(trainerNew.data)
    if (trainerNew.data.insertedId) {
       reset();

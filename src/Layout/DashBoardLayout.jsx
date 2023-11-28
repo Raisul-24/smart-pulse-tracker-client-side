@@ -23,6 +23,16 @@ const DashBoardLayout = () => {
                            <FaUsers></FaUsers>
                            All Users</NavLink>
                      </li>
+                     <li>
+                        <NavLink to="/dashboard/allTrainers">
+                           <FaUsers></FaUsers>
+                           All Trainers</NavLink>
+                     </li>
+                     <li>
+                        <NavLink to="/dashboard/allSubscribers">
+                           <FaUsers></FaUsers>
+                           All Subscribers</NavLink>
+                     </li>
                   </>
                      // :
                      // <>
