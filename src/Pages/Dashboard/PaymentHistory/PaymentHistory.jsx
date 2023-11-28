@@ -31,6 +31,7 @@ const PaymentHistory = () => {
                            </th>
                            <th>Email</th>
                            <th>Transaction Id</th>
+                           <th>Amount</th>
                            <th>Date</th>
                            <th>Status</th>
                         </tr>
@@ -47,6 +48,7 @@ const PaymentHistory = () => {
                               </td>
                               
                               <td>{item.transactionId}</td>
+                              <td>{item.price}</td>
                               <td>{item.date.substring(0,10)}</td>
                               <td>{item.status}</td>
                            </tr>)

@@ -68,9 +68,13 @@ const AllTrainers = () => {
                            <td>{user.salary}</td>
                            <td>{user.role}</td>
                            <td>
-                              <Link to={`/payment?amount=${user.salary}`}
+                              {
+                                 user?.role ? <p className="text-red-500">{user.role}</p> :
+                                 <Link to={`/payment?amount=${user.salary}`}
                               ><button onClick={() => handlePayment(user._id)}
-                              className="btn btn-outline btn-xs btn-info">Pay</button></Link>
+                              className="btn btn-outline btn-xs btn-info">Pay</button>
+                              </Link>
+                              }
                               </td>
                         </tr>)
                      }

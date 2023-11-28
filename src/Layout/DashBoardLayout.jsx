@@ -2,16 +2,18 @@
 import { FaBook, FaHome, FaUsers } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import UseAdmin from '../hooks/UseAdmin';
-import { FaComputer, FaPeopleLine } from 'react-icons/fa6';
+import { FaComputer, FaMessage, FaPeopleLine } from 'react-icons/fa6';
+import UseTrainer from '../hooks/UseTrainer';
 
 const DashBoardLayout = () => {
-// TODO get isAdmin value from the database
-const [isAdmin, isAdminLoading] = UseAdmin();
-if (isAdminLoading) {
-   <div className="">
-      <span className="loading loading-spinner text-primary"></span>
-   </div>
-}
+   // TODO get isAdmin value from the database
+   const [isAdmin, isAdminLoading] = UseAdmin();
+   const [isTrainer, isTrainerLoading] = UseTrainer();
+   if (isAdminLoading || isTrainerLoading) {
+      <div className="">
+         <span className="loading loading-spinner text-primary"></span>
+      </div>
+   }
    return (
       <div className="flex py-20">
          {/* dashboard side bar  */}
@@ -19,59 +21,76 @@ if (isAdminLoading) {
             <ul className="menu p-4 text-black text-lg font-semibold">
                {
                   isAdmin ?
-                   <>
-                     <li>
-                        <NavLink to="/dashboard/adminDashboard">
-                           <FaHome></FaHome>
-                           Admin Home</NavLink>
-                     </li>
-                     
-                     <li>
-                        <NavLink to="/dashboard/allUsers">
-                           <FaUsers></FaUsers>
-                           All Users</NavLink>
-                     </li>
-                     <li>
-                        <NavLink to="/dashboard/allTrainers">
-                           <FaUsers></FaUsers>
-                           All Trainers</NavLink>
-                     </li>
-                     <li>
-                        <NavLink to="/dashboard/allSubscribers">
-                           <FaUsers></FaUsers>
-                           All Subscribers</NavLink>
-                     </li>
-                     <li>
-                        <NavLink to="/dashboard/appliedTrainers">
-                           <FaUsers></FaUsers>
-                           Applied Trainers</NavLink>
-                     </li>
-                     <li>
-                        <NavLink to="/dashboard/paymentHistory">
-                           <FaBook></FaBook>
-                           Payment History</NavLink>
-                     </li>
-                  </>
-                     :
                      <>
                         <li>
-                           <NavLink to="/dashboard/userDashboard">
+                           <NavLink to="/dashboard/adminDashboard">
                               <FaHome></FaHome>
-                              User Home</NavLink>
+                              Admin Home</NavLink>
                         </li>
-                        <li>
-                           <NavLink to="/dashboard/profileSettings">
-                              <FaPeopleLine></FaPeopleLine>
-                              Profile Settings</NavLink>
-                        </li>
-                        <li>
-                           <NavLink to="/dashboard/recommendedClasses">
-                              <FaComputer></FaComputer>
-                              Classes</NavLink>
-                        </li>
-                        
 
+                        <li>
+                           <NavLink to="/dashboard/allUsers">
+                              <FaUsers></FaUsers>
+                              All Users</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/allTrainers">
+                              <FaUsers></FaUsers>
+                              All Trainers</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/allSubscribers">
+                              <FaUsers></FaUsers>
+                              All Subscribers</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/appliedTrainers">
+                              <FaUsers></FaUsers>
+                              Applied Trainers</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/paymentHistory">
+                              <FaBook></FaBook>
+                              Payment History</NavLink>
+                        </li>
                      </>
+                     :
+                     isTrainer ? <>
+                        <li>
+                           <NavLink to="/dashboard/trainerDashboard">
+                              <FaHome></FaHome>
+                              Trainer Home</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/trainerPost">
+                              <FaMessage></FaMessage>
+                              Post Forum</NavLink>
+                        </li>
+                        <li>
+                           <NavLink to="/dashboard/trainerManageSlot">
+                              <FaHome></FaHome>
+                              Manage-slots</NavLink>
+                        </li>
+                     </> :
+                        <>
+                           <li>
+                              <NavLink to="/dashboard/userDashboard">
+                                 <FaHome></FaHome>
+                                 User Home</NavLink>
+                           </li>
+                           <li>
+                              <NavLink to="/dashboard/profileSettings">
+                                 <FaPeopleLine></FaPeopleLine>
+                                 Profile Settings</NavLink>
+                           </li>
+                           <li>
+                              <NavLink to="/dashboard/recommendedClasses">
+                                 <FaComputer></FaComputer>
+                                 Classes</NavLink>
+                           </li>
+
+
+                        </>
                }
                <div className="divider"></div>
                {/* common */}
