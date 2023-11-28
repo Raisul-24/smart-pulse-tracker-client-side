@@ -33,6 +33,11 @@ const DashBoardLayout = () => {
                            <FaUsers></FaUsers>
                            All Subscribers</NavLink>
                      </li>
+                     <li>
+                        <NavLink to="/dashboard/appliedTrainers">
+                           <FaUsers></FaUsers>
+                           Applied Trainers</NavLink>
+                     </li>
                   </>
                      // :
                      // <>
