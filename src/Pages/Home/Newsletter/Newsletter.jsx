@@ -29,6 +29,7 @@ const Newsletter = () => {
    
    return (
       <div>
+         <h2 className="text-5xl text-center font-extrabold mt-5 text-orange-500">NewsLetter</h2>
          <div className="hero h-[500px] bg-white rounded-xl mb-36 md:mb-2">
             <div className="hero-content flex-col lg:flex-row-reverse md:gap-52">
                <div className="text-center lg:text-left">
