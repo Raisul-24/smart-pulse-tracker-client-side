@@ -63,7 +63,7 @@ import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
       {
         path: 'details/:id',
         element: <TrainerDetails></TrainerDetails>,
-        loader: ({params}) => fetch(`http://localhost:5013/trainers/${params.id}`)
+        loader: ({params}) => fetch(`https://fitness-tracker-server-side.vercel.app/trainers/${params.id}`)
       },
       {
         path: 'beTrainer',
