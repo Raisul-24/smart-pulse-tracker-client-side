@@ -6,8 +6,8 @@ const Classes = () => {
       <div className="pt-24 text-black">
          <div className="">
             <h2 className="text-4xl text-center font-bold ">Weekly Class Schedule</h2>
-            <div className="overflow-x-auto my-6 mb-14">
-               <table className="table">
+            <div className="overflow-x-auto my-6 mb-14 ml-0 lg:ml-10">
+               <table className="table ">
                   {/* head */}
                   <thead>
                      <tr>
@@ -25,7 +25,7 @@ const Classes = () => {
                            9:00 AM - 10:00 AM
                         </th>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Yoga</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -46,7 +46,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Kickboxing</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -67,7 +67,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Pilates</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -88,7 +88,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Zumba</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -115,7 +115,7 @@ const Classes = () => {
                            10:00 AM - 11:00 AM
                         </th>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">HIIT</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -136,7 +136,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Strength</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -157,7 +157,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Barre</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -178,7 +178,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Cycling</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -205,7 +205,7 @@ const Classes = () => {
                            3:00 PM - 4:00 PM
                         </th>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Pilates</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -226,7 +226,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Yoga</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -247,7 +247,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Zumba</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -268,7 +268,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Strength</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -295,7 +295,7 @@ const Classes = () => {
                            3:00 PM - 4:00 PM
                         </th>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Cycling</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -316,7 +316,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Zumba</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -337,7 +337,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Barre</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>
@@ -358,7 +358,7 @@ const Classes = () => {
                            </div>
                         </td>
                         <td>
-                           <div className="card w-60 shadow-xl p-3">
+                           <div className="card w-40 lg:w-60 shadow-xl p-3">
                               <h2 className="text-lg font-semibold text-center mb-1">Yoga</h2>
                               <div className="flex justify-center gap-x-4">
                                  <button className="btn btn-xs btn-ghost text-amber-400 bg-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Know More</button>

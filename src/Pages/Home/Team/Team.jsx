@@ -23,10 +23,10 @@ const Team = () => {
                </div>
                :
                
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" >
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" >
                      {
-                        trainers.map(trainer => <div key={trainer._id}>
-                           <img src={trainer.profileImage} alt="profile-picture" className="w-72 md:w-96 h-60 mr-10 rounded-t-xl" />
+                        trainers.map(trainer => <div key={trainer._id} className="mx-auto">
+                           <img src={trainer.profileImage} alt="profile-picture" className="w-72 md:w-96 h-60  rounded-t-xl" />
                            <h2 className="text-center text-red-500 font-extrabold bg-slate-400 rounded-b-xl w-72 md:w-96">{trainer.trainerName}</h2>
                         </div>
                          )  

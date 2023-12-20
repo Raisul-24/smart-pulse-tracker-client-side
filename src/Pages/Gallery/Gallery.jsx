@@ -17,19 +17,18 @@ const Gallery = () => {
          </Helmet>
          <h2 className="text-4xl text-center font-bold">Gallery</h2>
 
-         <div className="">
 
-            <div className="">
-               <PhotoProvider>
-                  <div className="foo grid grid-cols-1 md:grid-cols-3 gap-10 my-10">
-                     {images.map((item, index) => (
-                        <PhotoView key={index} src={item}>
-                           <img src={item} alt="" className="w-96 rounded-xl h-60" />
-                        </PhotoView>
-                     ))}
-                  </div>
-               </PhotoProvider>
-            </div>
+
+         <div className="container mx-auto">
+            <PhotoProvider>
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 my-10 mx-auto">
+                  {images.map((item, index) => 
+                     <PhotoView key={index} src={item}>
+                        <img src={item} alt="" className="w-96 rounded-xl h-60 mx-auto" />
+                     </PhotoView>
+                  )}
+               </div>
+            </PhotoProvider>
          </div>
       </div>
    );

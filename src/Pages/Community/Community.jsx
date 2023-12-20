@@ -49,7 +49,7 @@ const Community = () => {
    };
 
    return (
-      <div className="pt-24">
+      <div className="pt-24 container mx-auto">
          {
             loading ?
                <div className="flex justify-center items-center h-40">

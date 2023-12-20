@@ -33,7 +33,7 @@ const Trainer = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                      {
                         trainers.map(trainer => (
-                           <div key={trainer._id} className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
+                           <div key={trainer._id} className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border mx-auto">
                               <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                                  <img src={trainer.profileImage} alt="profile-picture" className="w-full h-full" />
                               </div>
