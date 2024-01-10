@@ -1,6 +1,7 @@
 # React + Vite
 # SmartPulse Tracker
 # Live Side: https://smart-palse-tracker.web.app
+# Server Side: https://github.com/Raisul-24/smart-pulse-tracker-server-side
 SmartPulse tracker is a full-stack web application designed to streamline admin and customer restaurant orders with a focus on user-friendly features. The website is built using a variety of ordering systems for different people, like Admin (dash-board, authorisation technology), Customer (Order, Payment), Seller(edit and manipulate data) including React.js, Express.js, MongoDB, Firebase Authentication (Recaptcha), Transtack Query, React awesome components, Implement Payment Gateway, JWT Authorization with Token. . . .. . .
 
  ## Some Key Features of this project
